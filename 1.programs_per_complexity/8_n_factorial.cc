@@ -12,6 +12,21 @@ void swap(int &a, int &b)
 	b = temp;
 }
 
+/**
+ * Permutate the array (see like a tree)
+ *  [1, 2, 3]
+ *     Swap(0,0): [1, 2, 3]
+ *       Swap(1, 1): [1, 2, 3]
+ *       Swap(1, 2): [1, 3, 2]
+ *
+ *     Swap(0,1): [2, 1, 3]
+ *       Swap(1, 1): [2, 1, 3]
+ *       Swap(1, 2): [2, 3, 1]
+ *
+ *     Swap(0,2): [3, 2, 1]
+ *       Swap(1, 1): [3, 2, 1]
+ *       Swap(1, 2): [3, 1, 2]
+ */
 void permutate(int arr[], int s, int e)
 {
 	static int count = 0;
